@@ -114,7 +114,7 @@ def test_script_game_stops_after_king_capture():
         "click 250 50",
         "wait 2000",
 
-        # ניסיון לבצע עוד מהלך לאחר סיום המשחק
+        # Try another move after the game is over
         "click 250 50",
         "click 250 250",
         "wait 2000",
@@ -140,11 +140,11 @@ def test_script_partial_movement_before_arrival():
         "click 50 50",
         "click 250 50",
 
-        # עדיין לא הגיע
+        # Not arrived yet
         "wait 500",
         "print board",
 
-        # הגיע
+        # Arrived
         "wait 2000",
         "print board",
     ])
@@ -188,14 +188,14 @@ def test_script_ignores_new_move_while_piece_is_moving():
         "click 50 50",
         "click 250 50",
 
-        # הכלי עדיין בתנועה
+        # The piece is still moving
         "wait 500",
 
-        # ניסיון לבצע מהלך חדש בזמן תנועה
+        # Try a new move while it is moving
         "click 250 50",
         "click 250 250",
 
-        # נותנים לתנועה הראשונה להסתיים
+        # Let the first move finish
         "wait 2000",
 
         "print board",
